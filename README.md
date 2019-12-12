@@ -17,7 +17,7 @@ Crea un modelo de receta en la ruta `/models/Recipe.js`. El esquema debe corresp
 - **duration**. Type `Number`. debe de tener un valor mínimo de 0
 - **creator**. Type `String`.
 - **created**. Type `Date`. Por defecto será la fecha actual. 
-- **state**. Type `Boolean`
+- **state**. Type `Boolean`, por defecto a true.
 
 __BONUS__ Controla los posibles errores dentro del esquema y añade mensajes para el cliente
 
