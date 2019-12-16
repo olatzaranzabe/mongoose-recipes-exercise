@@ -10,7 +10,7 @@ const DB_PORT = process.env.DB_PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use("/models", require("./models/recipe"));
+app.use("/recipes", require("./models/recipe"));
 mongoose
     .connect(`mongodb://localhost:${DB_PORT}/app`, {
         useNewUrlParser: true,
