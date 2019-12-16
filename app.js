@@ -4,6 +4,7 @@ const app = Express();
 const bodyParser = require("body-parser");
 // conectamos app a la base de datos
 const mongoose = require("mongoose");
+
 const SERVER_PORT = process.env.SERVER_PORT || 5000;
 const DB_PORT = process.env.DB_PORT || 3000;
 
@@ -16,7 +17,7 @@ mongoose
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    .then(() => console.log(`Connected to mongo on port ${DB_PORT}`))
+    .then(() => console.log("base de datos conectada"))
     .catch(err => {
         throw err;
     });
@@ -24,5 +25,5 @@ mongoose
 app.use((req, res) => res.status(404).json({ message: "route not found" }));
 
 app.listen(SERVER_PORT, () => {
-    console.log(`Server listening on pot ${SERVER_PORT}`);
+    console.log(`Server listening on port ${SERVER_PORT}`);
 });

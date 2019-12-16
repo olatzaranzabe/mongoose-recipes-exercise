@@ -1,7 +1,7 @@
 const express = require(express);
 const router = express.Router();
-const User = require("../models/Recipe");
-
+const Recipe = require("../models/Recipe");
+console.log("hola");
 router.get("/getRecipes", async (req, res) => {
     console.log("hiiiiiiii");
 
