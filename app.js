@@ -6,12 +6,12 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const SERVER_PORT = process.env.SERVER_PORT || 5000;
-const DB_PORT = process.env.DB_PORT || 3000;
+const DB_PORT = process.env.DB_PORT || 27017;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use("/recipes", require("./models/recipe"));
+app.use("/recipes", require("./routes/recipe"));
 mongoose
     .connect(`mongodb://localhost:${DB_PORT}/app`, {
         useNewUrlParser: true,
